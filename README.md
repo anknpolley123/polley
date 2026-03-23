@@ -7,7 +7,7 @@ A linux tool which is used to control a device with a image or hack ethically wi
 # Setting up terminal
 
 To use this tool, copy and paste these commands into your Kali Linux terminal:
-'''bash
+
 # 1. Update Your Terminal 
 sudo apt update && sudo apt upgrade
 
