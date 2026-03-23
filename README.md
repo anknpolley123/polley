@@ -36,6 +36,9 @@ sudo apt install netcat-traditional -y
 # 9. Run The Final Command
 ./run_all.sh
 
+# 10. Send the Malicious File
+go to linux File manager, go to home, go to polley folder, select malicious.png, send it to the victim. You will get control of the victim's device in your linux terminal.
+
 # DISCLAIMER 
 This Tool is only for Educational Purpose. We are not responsible for the Misuse or Any Harm by it.
 
