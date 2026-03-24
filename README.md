@@ -1,6 +1,6 @@
 # polley
 
-A linux tool which is used to control a device with a image or hack ethically with a image [with reverse_shell payloads within the PNG images] It can used in Android, IOS and Any type of linux.
+A linux tool which is used to control a device with a image or hack ethically with a image [with reverse_shell payloads within the PNG images] It can used in Android, IOS and Any type of linux. It can hack windows, linux, mac.
 
 ![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/e2835fcc-ad11-474e-870b-8f45bd2bbff0)
 
@@ -29,10 +29,12 @@ git clone https://github.com/anknpolley123/polley.git
 
 # 4. Enter The Folder
 cd ~/polley
+
 ![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/4e798b5b-e5bd-43fd-a632-26641df89305)
 
 # 5. Then, Compile The File reverse_shell.c
 gcc reverse_shell.c -o reverse_shell
+
 ![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/82edc3af-dec4-4ff9-8dce-45ed961975ca)
 
 # 6. Compile The File embed_payload.c
@@ -53,9 +55,14 @@ chmod +x run_all.sh
 
 # 9. Run The Final Command
 ./run_all.sh
-![Screenshot_20260323_220005_Termux](https://github.com/user-attachments/assets/584da564-24b6-4e24-9a83-2d9f56db352d)
 
-# 10. Send the Malicious File
+![Screenshot_20260323_220005_Termux](https://github.com/user-attachments/assets/584da564-24b6-4e24-9a83-2d9f56db352d)
+# 10. Rename the malicious.png 
+
+mv malicious.png polley.png.exe
+Or, mv malicious.png polley.exe
+
+# 11. Send the Malicious File
 
 go to linux File manager, go to home, go to polley folder, select malicious.png, send it to the victim. You will get control of the victim's device in your linux terminal.
 
