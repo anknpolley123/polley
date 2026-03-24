@@ -67,7 +67,8 @@ This Tool is only for Educational Purpose. We are not responsible for the Misuse
 For More Information You Can Contact me: ankonpolley@proton.me
 
 Or My Instagram Id: @itz_vorzhevik_volnyshev;
- alt: itz_ankon_polley
+ 
+alt: itz_ankon_polley
 
 Support Me on Twitter'X': @AnkonPolley
 
