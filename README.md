@@ -2,7 +2,8 @@
 
 A linux tool which is used to control a device with a image or hack ethically with a image [with reverse_shell payloads within the PNG images] It can used in Android, IOS and Any type of linux.
 
-![Screenshot_20260323_220005_Termux](https://github.com/user-attachments/assets/c3e4f138-a3be-4476-a57d-2c549ce4384a)
+![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/e2835fcc-ad11-474e-870b-8f45bd2bbff0)
+
 
 ## COMMANDS 
 
