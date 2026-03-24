@@ -3,10 +3,7 @@
 #include <string.h>
 #include <png.h>
 
-/**
- * Note: This follows the structure of the YouTube tutorial provided.
- * It handles the cleanup and memory management seen in your screenshot.
- */
+
 void embed_payload(char *input_file, char *output_file, char *payload) {
     // Variable declarations for PNG structures
     png_structp png = NULL;
