@@ -65,7 +65,12 @@ This Tool is only for Educational Purpose. We are not responsible for the Misuse
 [Thank You For Using My linux Tool 'polley']
 
 For More Information You Can Contact me: ankonpolley@proton.me
-Or My Instagram Id: @itz_vorzhevik_volnyshev ; alt: itz_ankon_polley
+
+Or My Instagram Id: @itz_vorzhevik_volnyshev;
+ alt: itz_ankon_polley
+
 Support Me on Twitter'X': @AnkonPolley
+
 Follow My Pinterest account: @ankonpolley
+
 Support me also in Facebook: Ankon Polley
