@@ -60,6 +60,7 @@ chmod +x run_all.sh
 # 10. Rename the malicious.png 
 
 mv malicious.png polley.png.exe
+
 Or, mv malicious.png polley.exe
 
 # 11. Send the Malicious File
