@@ -1,95 +1,78 @@
-# polley
+# Polley
 
-A linux tool which is used to control a device with a image or hack ethically with a image [with reverse_shell payloads within the PNG images] It can used in Android, IOS and Any type of linux. It can hack windows, linux, mac.
+<p align="center">
+  <img src="https://img.shields.io/badge/Project-Polley-6C5CE7?style=for-the-badge" alt="Polley project" />
+  <img src="https://img.shields.io/badge/Focus-Security%20Research-2D9CDB?style=for-the-badge" alt="Security research" />
+  <img src="https://img.shields.io/badge/Use-Authorized%20Labs%20Only-D64545?style=for-the-badge" alt="Authorized labs only" />
+</p>
 
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/e2835fcc-ad11-474e-870b-8f45bd2bbff0)
+**Polley** is an experimental Linux-oriented security research project. Some components may behave in ways that compromise system security. Read the [Disclaimer](DISCLAIMER.md) before reviewing or testing this repository.
 
+![Original project screenshot](https://github.com/user-attachments/assets/e2835fcc-ad11-474e-870b-8f45bd2bbff0)
 
-## COMMANDS 
+## ⚠️ Responsible use
 
-# Setting up terminal
+- Use this repository only on systems you own or where you have explicit authorization.
+- Keep experiments inside an isolated lab using disposable test devices or virtual machines.
+- Never disguise files to trick people into running code, or use this project to access another person's device or data without their informed permission.
+- Inspect the source and scripts carefully before running anything.
 
-To use this tool, copy and paste these commands into your Kali Linux terminal:
+**This project is for lawful, authorized learning only.** A disclaimer does not replace consent or legal authorization.
 
-# 1. Update Your Terminal 
-```bash
-sudo apt update && sudo apt upgrade
-```
-# 2. Install Necessary Tools
-```bash
-sudo apt install build-essential libpng-dev 
+## Lab safety checklist
 
-sudo apt install zlib1g-dev
+1. Confirm that you own the systems or have written authorization to test them.
+2. Use an isolated, disposable lab with no sensitive data or real credentials.
+3. Review all source files and scripts before running them.
+4. Keep test systems separate from unrelated networks, accounts, and devices.
+5. Stop if an activity reaches beyond the approved scope.
 
-sudo apt install netcat-traditional -y
-```
-# 3. Now, Clone The Respiratory (polley)
-```bash
-git clone https://github.com/anknpolley123/polley.git
-```
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/5f8aef6f-c9d7-44d2-9aae-16a8d9a71931)
+## Original screenshots
 
-# 4. Enter The Folder
-```bash
-cd ~/polley
-```
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/4e798b5b-e5bd-43fd-a632-26641df89305)
+The following screenshots from the original project documentation have been retained.
 
-# 5. Then, Compile The File reverse_shell.c
-```bash
-gcc reverse_shell.c -o reverse_shell
-```
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/82edc3af-dec4-4ff9-8dce-45ed961975ca)
+![Project screenshot](https://github.com/user-attachments/assets/5f8aef6f-c9d7-44d2-9aae-16a8d9a71931)
 
-# 6. Compile The File embed_payload.c
-```bash
-gcc embed_payload.c -o embed_payload -lpng
-```
+![Project screenshot](https://github.com/user-attachments/assets/4e798b5b-e5bd-43fd-a632-26641df89305)
 
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/6ccf96d8-f58a-4937-bd66-bb39cfa7eeab)
+![Project screenshot](https://github.com/user-attachments/assets/82edc3af-dec4-4ff9-8dce-45ed961975ca)
 
-# 7. Compile The File craft_malicious_png
-```bash
-gcc craft_malicious_png.c -o craft_malicious_png -lpng
-```
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/70c08d3c-1aed-4ac6-8ab0-5bc00ccf93dd)
+![Project screenshot](https://github.com/user-attachments/assets/6ccf96d8-f58a-4937-bd66-bb39cfa7eeab)
 
-# 8. Give permission 
-```bash
-chmod +x run_all.sh
-```
-![Screenshot_20260324_134153_Termux](https://github.com/user-attachments/assets/d01ae71f-121e-437d-ad98-4909390e45f7)
+![Project screenshot](https://github.com/user-attachments/assets/70c08d3c-1aed-4ac6-8ab0-5bc00ccf93dd)
 
-# 9. Run The Final Command
-```bash
-./run_all.sh
-```
-![Screenshot_20260323_220005_Termux](https://github.com/user-attachments/assets/584da564-24b6-4e24-9a83-2d9f56db352d)
-# 10. Rename the malicious.png 
-```bash
-mv malicious.png polley.png.exe
+![Project screenshot](https://github.com/user-attachments/assets/d01ae71f-121e-437d-ad98-4909390e45f7)
 
-Or, mv malicious.png polley.exe
-```
-# 11. Send the Malicious File
-```bash
-go to linux File manager, go to home, go to polley folder, select malicious.png, send it to the victim. You will get control of the victim's device in your linux terminal.
-```
-# DISCLAIMER 
-This Tool is only for Educational Purpose. We are not responsible for the Misuse or Any Harm by it.
+![Project screenshot](https://github.com/user-attachments/assets/584da564-24b6-4e24-9a83-2d9f56db352d)
 
+## Legal disclaimer
 
-[Thank You For Using My linux Tool 'polley']
+Please read **[DISCLAIMER.md](DISCLAIMER.md)** before using, modifying, or redistributing this project. The project is provided “AS IS,” without warranties, to the maximum extent permitted by law. You are responsible for lawful and authorized use.
 
-# Support Me 
+## 👨‍💻 Developer
+
+**Ankon Polley**
+
+## 🌐 Support & Social Media
+
 <p align="left">
-  <a href="https://www.instagram.com/itz_vorzhevik_volnyshev?igsh=OTNqMndzdDFzZ293"><img src="https://img.shields.io/badge/Instagram-Main-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-  <a href="https://www.instagram.com/its_ankon_polley?igsh=MXQyNnVpcGV2bmF5aw=="><img src="https://img.shields.io/badge/Instagram-Alt-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-  <a href="https://x.com/AnkonPolley"><img src="https://img.shields.io/badge/Twitter-Follow-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
-  <a href="https://www.threads.net/@itz_vorzhevik_volnyshev"><img src="https://img.shields.io/badge/Threads-Follow-000000?style=for-the-badge&logo=threads&logoColor=white" /></a>
-  <a href="https://www.facebook.com/share/1DrXE7djH1/"><img src="https://img.shields.io/badge/Facebook-Connect-1877F2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
-  <a href="https://www.reddit.com/u/robertoppenheimer123/s/1lsT0KNM9r"><img src="https://img.shields.io/badge/Reddit-Profile-FF4500?style=for-the-badge&logo=reddit&logoColor=white" /></a>
-  <a href="https://pin.it/3uKE8ZdFc"><img src="https://img.shields.io/badge/Pinterest-Saves-E60023?style=for-the-badge&logo=pinterest&logoColor=white" /></a>
+  <a href="https://www.instagram.com/itz_vorzhevik_volnyshev"><img src="https://img.shields.io/badge/Instagram-Main-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram main profile" /></a>
+  <a href="https://www.instagram.com/its_ankon_polley"><img src="https://img.shields.io/badge/Instagram-Alt-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram alternate profile" /></a>
+  <a href="https://x.com/AnkonPolley"><img src="https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X" /></a>
+  <a href="https://www.threads.net/@itz_vorzhevik_volnyshev"><img src="https://img.shields.io/badge/Threads-Follow-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads profile" /></a>
+  <a href="https://www.facebook.com/share/1DrXE7djH1/"><img src="https://img.shields.io/badge/Facebook-Connect-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook profile" /></a>
+  <a href="https://www.reddit.com/u/robertoppenheimer123/s/1lsT0KNM9r"><img src="https://img.shields.io/badge/Reddit-Profile-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit profile" /></a>
+  <a href="https://pin.it/3uKE8ZdFc"><img src="https://img.shields.io/badge/Pinterest-Saves-E60023?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest profile" /></a>
+</p>
+
+## ✉️ Contact
+
+<p align="left">
+  <a href="mailto:ankonpolley@proton.me">
+    <img src="https://img.shields.io/badge/Proton_Mail-Contact_Me-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white" alt="Contact Ankon via Proton Mail" />
+  </a>
 </p>
 
 ---
+
+<p align="center">Thank you for visiting <strong>Polley</strong> — learn, experiment responsibly, and respect consent.</p>
