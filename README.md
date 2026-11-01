@@ -102,3 +102,15 @@ This project is provided for lawful, authorized educational research only. No di
 <p align="left">
   <a href="mailto:ankonpolley@proton.me"><img src="https://img.shields.io/badge/Proton_Mail-Contact_Me-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white" alt="Contact Ankon via Proton Mail" /></a>
 </p>
+
+---
+
+
+
+<p align="center">
+  <b>polley — Organize Your Thoughts. Build Your Future.</b>
+  <br>
+  Made with ❤️ by Ankon Polley
+</p>
+
+---
